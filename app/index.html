@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealSleuth — Black Friday Deal Finder</title>
+<meta name="description" content="Black Friday and Cyber Monday deals, found and checked live on 27 Nov 2026. Every deal names its store, sale price, usual price, discount and check time — plus an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="brand"><span class="logo" aria-hidden="true">⌕</span> Deal<span class="brand-accent">Sleuth</span></p>
+    <p class="tagline">Black Friday &amp; Cyber Monday deals, hunted down and checked by hand — not scraped, not guessed.</p>
+    <p class="dateline">All prices read on <b>Friday 27 November 2026</b> · Sale runs to Cyber Monday, 30 Nov · Prices move — check at the store before you buy.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Find a deal">
+    <div class="search-row">
+      <label class="search-label" for="search">Search deals</label>
+      <input id="search" type="search" placeholder="Try “airpods”, “OLED”, “lego”, “vacuum”…">
+    </div>
+    <div class="cats" id="cats" role="group" aria-label="Category"></div>
+    <div class="filter-row">
+      <label>Store
+        <select id="store"></select>
+      </label>
+      <label>Discount
+        <select id="minpct"></select>
+      </label>
+      <label>Sort by
+        <select id="sort"></select>
+      </label>
+      <label class="check"><input type="checkbox" id="newlow"> New lows only</label>
+      <button type="button" id="clear" class="clear">Clear filters</button>
+    </div>
+  </section>
+
+  <div id="hero"></div>
+  <p id="stats" class="stats"></p>
+  <p id="count" class="count" aria-live="polite"></p>
+  <div id="deals"></div>
+</main>
+
+<footer class="wrap">
+  <h2>How we checked every deal</h2>
+  <p>Each deal on this page was found and checked on <b>27 November 2026</b> by reading the price at the store it names, or in a deals roundup that names the store. Every card says when its price was read and where. The discount is always computed from the two prices shown — if they do not add up, the deal is wrong, and we would rather drop it than list it.</p>
+  <p>The verdict is our honest call. <b>NEW LOW</b> means the lowest price the cited source has ever tracked. <b>STRONG DEAL</b> is a deep cut on a current model, near its best price. <b>GOOD DEAL</b> is a real saving, but not the cheapest it has been. <b>ROUTINE SALE</b> is a small cut — worth it only if you need the thing now. We never list a product, store, price or link that no store or deals source showed when we checked it.</p>
+  <p class="fineprint">DealSleuth is an independent deal finder. Prices and stock change during Black Friday week; always confirm the price at checkout. Store links go to the product search at that store. “Black Friday” and store names belong to their owners. Built 27 Nov 2026.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
+<!-- DealSleuth: 33 deals, all checked 27 Nov 2026. Filters live in the hash: try #cat=TVs&min=40 or #deal=airpods-pro-3 -->
